@@ -1,13 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
 
-
+/* Tema claro */
 :root {
-    /* Cores pensadas inicialmente (como base) */
-    --roxo: #5200ff;
-    --roxo-escuro: #0f0030;
-    --verde: #88ff89;
-    
-    --degrade-azul: #5170ff;
-    --degrade-rosa: #ff66c4;
+  --bg: #fff;
+  --bg-secondary: #f5f5f7;
+  --text: #111111;
+  --text-secondary: #444444;
+  --border: #dcdcdc;
+  --icon: var(--purple);
+
+  /* Cores pensadas inicialmente (como base) */
+  --gradient-blue: #5170ff;
+  --gradient-pink: #ff66c4;
+  --purple: #5200ff;
+  --dark-purple: #0f0030;
+  --green: #88ff89;
+}
+
+/* Tema escuro */
+.dark {
+  --bg: #0f0f10;
+  --bg-secondary: #0f0030;
+  --text: #f2f2f2;
+  --text-secondary: #bbbbbb;
+  --border: #1b0153;
+  --icon: var(--green);
+}
+
+.nav-hover {
+    @apply hover:underline;
+}
+
+/* icons? */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

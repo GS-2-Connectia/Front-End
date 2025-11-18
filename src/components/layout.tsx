@@ -1,26 +1,45 @@
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link, Outlet } from "react-router-dom";
+import { useTheme } from "../context/theme-context";
+import { ThemedText } from "../types/themed-text";
+import { Icon } from "./icon";
 
 export function Layout() {
-    return (
-        <div>
-            <nav className="flex flex-row items-center bg-purple-950 border-b-2 border-purple-900 text-white px-4 h-14">
-                <div className="ml-16 flex flex-1 gap-4">
-                    <Link to="/home">
-                        <span className="font-bold bg-linear-to-r from-[#5170ff] to-[#ff66c4] text-transparent bg-clip-text">
-                            Connectia
-                        </span> {"<>"} Home</Link>
-                    <Link to={"/integrantes"}>Integrantes</Link>
-                    <Link to={"/sobre"}>Sobre</Link>
-                    <Link to={"/contato"}>Contato</Link>
+    const { theme, toggleTheme } = useTheme();
+    const { gradientText } = ThemedText();
 
+    return (
+        <div className="bg-(--bg) text-(--text) min-h-screen transition-colors">
+
+            <nav className="flex flex-row items-center bg-(--bg-secondary) border-(--border) border-b text-(--text) px-4 h-14">
+                <div className="ml-16 flex flex-1 gap-4">
+
+                    <Link to="/" className="flex">
+                        <span className={`font-bold ${gradientText}`}>
+                            Connectia
+                        </span>
+                        <Icon name="network_intel_node" size={24} />
+                    </Link>
+                    <Link className="hover:underline"
+                        to="/">
+
+                        Home
+                    </Link>
+                    <Link className="nav-hover" to={"/integrantes"}>Integrantes</Link>
+                    <Link className="nav-hover" to={"/sobre"}>Sobre</Link>
+                    <Link className="nav-hover" to={"/contato"}>Contato</Link>
                 </div>
 
-                <div>
-                    <button className="hover:cursor-pointer">Conta</button>
+                <div className="flex items-center gap-4 ">
+                    <button onClick={toggleTheme} className="hover:opacity-70 transition hover:cursor-pointer">
+                        {theme === "light" ? "🌙 Escuro" : "☀️ Claro"}
+                    </button>
+
+                    <button className="hover:cursor-pointer">Conta <AccountCircleIcon sx={{ fontSize: 32}} className="text-(--icon)" /></button>
                 </div>
             </nav>
 
             <Outlet />
         </div>
-    )
+    );
 }
