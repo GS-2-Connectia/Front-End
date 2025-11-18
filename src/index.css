@@ -8,6 +8,7 @@
   --text: #111111;
   --text-secondary: #444444;
   --border: #dcdcdc;
+  --icon: var(--purple);
 
   /* Cores pensadas inicialmente (como base) */
   --gradient-blue: #5170ff;
@@ -23,5 +24,19 @@
   --bg-secondary: #0f0030;
   --text: #f2f2f2;
   --text-secondary: #bbbbbb;
-  --border: rgb(27, 1, 83);
+  --border: #1b0153;
+  --icon: var(--green);
+}
+
+.nav-hover {
+    @apply hover:underline;
+}
+
+/* icons? */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
