@@ -15,7 +15,7 @@ export function Layout() {
                 <div className="ml-16 flex flex-1 gap-4">
 
                     <Link to="/" className="flex">
-                        <span className={`${gradientText}`}>
+                        <span className={`font-bold ${gradientText}`}>
                             Connectia
                         </span>
                         <Icon name="network_intel_node" size={24} />
@@ -30,12 +30,12 @@ export function Layout() {
                     <Link className="nav-hover" to={"/contato"}>Contato</Link>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 ">
                     <button onClick={toggleTheme} className="hover:opacity-70 transition hover:cursor-pointer">
                         {theme === "light" ? "🌙 Escuro" : "☀️ Claro"}
                     </button>
 
-                    <button className="hover:cursor-pointer">Conta <AccountCircleIcon className="text-(--icon)" /></button>
+                    <button className="hover:cursor-pointer">Conta <AccountCircleIcon sx={{ fontSize: 32}} className="text-(--icon)" /></button>
                 </div>
             </nav>
 
