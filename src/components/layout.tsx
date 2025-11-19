@@ -1,4 +1,6 @@
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { Link, Outlet } from "react-router-dom";
 import { useTheme } from "../context/theme-context";
 import { ThemedText } from "../types/themed-text";
@@ -10,6 +12,7 @@ export function Layout() {
     const { theme, toggleTheme } = useTheme();
     const { gradientText } = ThemedText();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
     // Fechar ao clicar fora
@@ -27,8 +30,9 @@ export function Layout() {
         <div className="bg-(--bg) text-(--text) min-h-screen transition-colors">
 
             <nav className="flex flex-row items-center bg-(--bg-2) border-(--border) border-b text-(--text) px-4 h-14">
-                <div className="ml-16 flex flex-1 gap-4">
 
+                {/* --- MENU DESKTOP --- */}
+                <div className="hidden md:flex ml-8 flex-1 gap-4">
                     <Link to="/" className="flex">
                         <span className={`font-bold ${gradientText}`}>
                             Connectia
@@ -42,6 +46,21 @@ export function Layout() {
                     <Link className="nav-hover" to="/contato">Contato</Link>
                 </div>
 
+                {/* --- MOBILE: LOGO + HAMBURGUER --- */}
+                <div className="flex md:hidden flex-1">
+                    <button onClick={() => setHamburgerOpen(true)}>
+                        <MenuIcon className="text-(--text)" sx={{ fontSize: 32 }} />
+                    </button>
+
+                    <Link to="/" className="flex ml-4 items-center">
+                        <span className={`font-bold ${gradientText}`}>
+                            Connectia
+                        </span>
+                        <Icon name="network_intel_node" size={24} />
+                    </Link>
+                </div>
+
+                {/* --- Botão Conta (Desktop e Mobile) --- */}
                 <div className="flex items-center gap-4">
                     <button
                         onClick={() => setMenuOpen(prev => !prev)}
@@ -52,13 +71,44 @@ export function Layout() {
                 </div>
             </nav>
 
-            {/* ---- MENU COMPONENT ---- */}
+            {/* ---- MENU CONTA ---- */}
             <DropdownMenu
                 open={menuOpen}
                 menuRef={menuRef}
                 theme={theme}
                 toggleTheme={toggleTheme}
             />
+
+            {/* ---- MENU MOBILE LATERAL ---- */}
+            {hamburgerOpen && (
+                <div className="fixed inset-0 bg-black/50 z-40 md:hidden" onClick={() => setHamburgerOpen(false)}>
+                    <div
+                        className="absolute left-0 top-0 h-full w-64 bg-(--bg-2) text-(--text) p-6 shadow-xl"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex justify-between items-center mb-6">
+                            <span className="text-lg font-bold">Menu</span>
+                            <button onClick={() => setHamburgerOpen(false)}>
+                                <CloseIcon className="text-(--text)" />
+                            </button>
+                        </div>
+
+                        <nav className="flex flex-col gap-4 text-lg">
+                            <Link to="/" onClick={() => setHamburgerOpen(false)}>Home</Link>
+                            <Link to="/integrantes" onClick={() => setHamburgerOpen(false)}>Integrantes</Link>
+                            <Link to="/sobre" onClick={() => setHamburgerOpen(false)}>Sobre</Link>
+                            <Link to="/contato" onClick={() => setHamburgerOpen(false)}>Contato</Link>
+
+                            <button
+                                onClick={toggleTheme}
+                                className="mt-4 py-2 px-3 bg-(--bg-3) rounded-md hover:opacity-80"
+                            >
+                                Alternar Tema
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            )}
 
             <main className="mt-4">
                 <Outlet />

@@ -1,5 +1,5 @@
 import { Aluno } from "../components/aluno";
-import johnny from "../assets/johnny.jpeg";
+import johnny from "../assets/johnny.png";
 import luisa from "../assets/luisa.jpg";
 
 export function Members() {
