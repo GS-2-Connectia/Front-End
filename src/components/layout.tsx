@@ -60,7 +60,7 @@ export function Layout() {
                 toggleTheme={toggleTheme}
             />
 
-            <main>
+            <main className="mt-4">
                 <Outlet />
             </main>
         </div>
