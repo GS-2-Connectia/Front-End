@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export function Aluno({ nome, img, rm, github, linkedin }: AlunoProps) {
     return (
-        <div className="mt-6 bg-(--bg-2) rounded-xl p-2 text-(--text) mb-4 px-12 py-12">
+        <div className="mt-6 bg-(--bg-2) rounded-xl p-2 text-(--text) mb-4 px-12 py-12 shadow-xl">
             <h4 className="text-(--title) font-bold mb-2">{nome}</h4>
             <div>
                 <img src={img} alt={`Integrante ${nome}`}
