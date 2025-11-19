@@ -4,11 +4,14 @@
 /* Tema claro */
 :root {
   --bg: #fff;
-  --bg-secondary: #f5f5f7;
+  --bg-2: #f5f5f7;
   --text: #111111;
-  --text-secondary: #444444;
+  --text-2: #444444;
   --border: #dcdcdc;
+  --border-2: #dcdcdc;
   --icon: var(--purple);
+
+  --select: #dcdcdc;
 
   /* Cores pensadas inicialmente (como base) */
   --gradient-blue: #5170ff;
@@ -21,11 +24,15 @@
 /* Tema escuro */
 .dark {
   --bg: #0f0f10;
-  --bg-secondary: #0f0030;
+  --bg-2: #0f0030;
+  --bg-3: #18181b; /* Slate 950 do Tailwind */
   --text: #f2f2f2;
-  --text-secondary: #bbbbbb;
+  --text-2: #bbbbbb;
   --border: #1b0153;
+  --border-2: var(--green);
   --icon: var(--green);
+
+  --select: #18181b;
 }
 
 .nav-hover {
