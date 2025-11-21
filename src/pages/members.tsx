@@ -5,7 +5,7 @@ import luisa from "../assets/luisa.jpg";
 export function Members() {
     return (
         <main>
-            <h1 className="flex justify-center text-xl font-bold text-(--text)">
+            <h1 className="title">
                 Integrantes
             </h1>
             <article className="flex flex-col text-center place-content-center">

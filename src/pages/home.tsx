@@ -2,7 +2,7 @@ export function Home() {
     return (
         <div>
             <main>
-                <h1 className="">Connectia</h1>
+                <h1 className="title">Home</h1>
             </main>
         </div>
     )
