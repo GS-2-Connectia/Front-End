@@ -49,3 +49,11 @@
   'GRAD' 0,
   'opsz' 24
 }
+
+.title {
+  @apply flex justify-center text-4xl font-bold text-(--text) mb-4;
+}
+
+.highlight {
+  @apply font-bold text-(--icon);
+}

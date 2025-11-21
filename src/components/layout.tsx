@@ -98,13 +98,6 @@ export function Layout() {
                             <Link to="/integrantes" onClick={() => setHamburgerOpen(false)}>Integrantes</Link>
                             <Link to="/sobre" onClick={() => setHamburgerOpen(false)}>Sobre</Link>
                             <Link to="/contato" onClick={() => setHamburgerOpen(false)}>Contato</Link>
-
-                            <button
-                                onClick={toggleTheme}
-                                className="mt-4 py-2 px-3 bg-(--bg-3) rounded-md hover:opacity-80"
-                            >
-                                Alternar Tema
-                            </button>
                         </nav>
                     </div>
                 </div>
