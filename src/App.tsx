@@ -3,6 +3,7 @@ import { Home } from "./pages/home"
 import { Layout } from "./components/layout"
 import { Members } from "./pages/members"
 import { About } from "./pages/about"
+import { Profile } from "./pages/profile"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
                     <Route index path="/" element={<Home/>} />
                     <Route path="/integrantes" element={<Members/>} />
                     <Route path="/sobre" element={<About/>} />
+                    <Route path="/usuario" element={<Profile />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -1,8 +1,8 @@
-import type { AlunoProps } from "../types/aluno-props";
+import type { StudentProps } from "../types/student-props";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-export function Aluno({ nome, img, rm, github, linkedin }: AlunoProps) {
+export function Student({ nome, img, rm, github, linkedin }: StudentProps) {
     return (
         <div className="flex flex-col justify-center items-center bg-(--bg-2) text-center rounded-xl p-2 text-(--text) mb-4 px-4 py-8 w-90 h-105 shadow-xl">
             <h4 className="text-(--title) text-xl font-bold mb-2">{nome}</h4>

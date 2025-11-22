@@ -54,6 +54,10 @@
   @apply flex justify-center text-4xl font-bold text-(--text) mb-4;
 }
 
+.sub {
+  @apply flex justify-center text-xl font-bold text-(--text);
+}
+
 .highlight {
   @apply font-bold text-(--icon);
 }
