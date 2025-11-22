@@ -8,8 +8,8 @@ export function Members() {
             <h1 className="title">
                 Integrantes
             </h1>
-            <article className="flex flex-col text-center place-content-center">
-                <div className="flex flex-row place-content-around">
+            <article className="mx-auto w-4/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch justify-items-center">
                     <Aluno
                         id="1"
                         nome="Johnny Dias Mathias Junior"
