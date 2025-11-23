@@ -1,4 +1,5 @@
 import type { RefObject } from "react";
+import { Link } from "react-router-dom";
 
 interface DropdownMenuProps {
     open: boolean;
@@ -22,9 +23,9 @@ export function DropdownMenu({ open, menuRef, theme, toggleTheme }: DropdownMenu
         transition-colors
       "
         >
-            <button className="block w-full rounded-t-2xl text-left px-4 py-2 hover:bg-(--select)">
+            <Link to={"/usuario"} className="block w-full rounded-t-2xl text-left px-4 py-2 hover:bg-(--select)">
                 Perfil
-            </button>
+            </Link>
 
             <button className="block w-full text-left px-4 py-2 hover:bg-(--select)">
                 Configurações

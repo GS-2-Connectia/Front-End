@@ -1,4 +1,4 @@
-import { Aluno } from "../components/aluno";
+import { Student } from "../components/student";
 import johnny from "../assets/johnny.png";
 import luisa from "../assets/luisa.jpg";
 
@@ -8,9 +8,9 @@ export function Members() {
             <h1 className="title">
                 Integrantes
             </h1>
-            <article className="flex flex-col text-center place-content-center">
-                <div className="flex flex-row place-content-around">
-                    <Aluno
+            <article className="mx-auto w-4/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch justify-items-center">
+                    <Student
                         id="1"
                         nome="Johnny Dias Mathias Junior"
                         img={johnny}
@@ -18,7 +18,7 @@ export function Members() {
                         github="https://github.com/johnny-mathias"
                         linkedin="https://www.linkedin.com/in/johnny-mathias-dev/"
                     />
-                    <Aluno
+                    <Student
                         id="2"
                         nome="Luisa Ganasevici de Abreu"
                         img={luisa}
