@@ -4,6 +4,7 @@ import { CoursesContext } from "../context/course-context";
 
 export function Home() {
     const { Courses } = useContext(CoursesContext);
+    
 
     return (
         <div>
