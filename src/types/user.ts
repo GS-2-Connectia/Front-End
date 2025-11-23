@@ -1,20 +1,15 @@
-import type { Area } from "./area";
-import type { CareerProps } from "./career"
-
-export interface UserProps {
-    id: number;
-    nome: String;
+export interface User {
+    idUsuario: number;
+    idCarreira: number;
+    nmUsuario: String;
     email: String;
     senha: String;
-    carreira: CareerProps;
-    tipoPlano: String;
-    area: Area;
+    tpPlano: String;
 
-    // private int idUsuario;
-    // private String nome;
-    // private String email;
-    // private String senha;
-    // private Carreira carreira;
-    // private String tipoPlano;
-    // private Area area;
+    // ID_USUARIO             NUMBER(5) NOT NULL,
+    // ID_CARREIRA            NUMBER(6) NOT NULL,
+    // NM_USUARIO             VARCHAR2(70) NOT NULL,
+    // DS_EMAIL               VARCHAR2(60) NOT NULL,
+    // DS_SENHA               VARCHAR2(30) NOT NULL,
+    // TP_PLANO               VARCHAR2(9) NOT NULL
 }
