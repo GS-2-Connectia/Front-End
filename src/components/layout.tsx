@@ -7,6 +7,7 @@ import { ThemedText } from "../types/themed-text";
 import { Icon } from "./icon";
 import { useEffect, useRef, useState } from "react";
 import { DropdownMenu } from "./dropdown-menu";
+import { Footer } from "./footer";
 
 export function Layout() {
     const { theme, toggleTheme } = useTheme();
@@ -106,6 +107,9 @@ export function Layout() {
             <main className="mt-4">
                 <Outlet />
             </main>
+            <footer className="mt-8">
+                <Footer/>
+            </footer>
         </div>
     );
 }

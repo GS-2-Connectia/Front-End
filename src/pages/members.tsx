@@ -4,7 +4,7 @@ import luisa from "../assets/luisa.jpg";
 
 export function Members() {
     return (
-        <main>
+        <main className="min-h-screen">
             <h1 className="title">
                 Integrantes
             </h1>
