@@ -1,4 +1,4 @@
-export interface AlunoProps {
+export interface StudentProps {
   id: string;
   nome: string;
   img: string;
