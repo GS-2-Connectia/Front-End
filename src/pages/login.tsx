@@ -29,7 +29,7 @@ export function Login() {
 
     return (
         <>
-            <div className="w-full max-h-screen p-4 flex flex-col items-center">
+            <div className="w-full min-h-[79dvh] p-4 flex flex-col items-center">
                 <div className="flex flex-col items-center">
                     <h2 className={`text-3xl font-bold ${gradientText} mb-2`}>Login</h2>
                     <h3 className="text-(--text-2)">Você precisa fazer login para acessar essa página</h3>
