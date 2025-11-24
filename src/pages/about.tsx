@@ -22,7 +22,7 @@ export function About() {
                     </div>
 
                     <div className="md:w-1/2">
-                        <YouTube videoId="I7MBoiZSwEQ" opts={{ width: "100%", height: "315" }} />
+                        <YouTube videoId="lX_CfuKeClo" opts={{ width: "100%", height: "315" }} />
                     </div>
                 </section>
 
