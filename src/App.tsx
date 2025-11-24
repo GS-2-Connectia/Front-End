@@ -8,6 +8,7 @@ import { useContext } from "react"
 import { AuthContext, AuthProvider } from "./context/auth-context"
 import { CoursesProvider } from "./context/course-context"
 import { Login } from "./pages/login"
+import { Contact } from "./pages/contact"
 
 interface PrivateRouteProps {
   children: React.ReactNode;
@@ -39,6 +40,7 @@ function App() {
               <Route path="/integrantes" element={<Members />} />
               <Route path="/sobre" element={<About />} />
               <Route path="/usuario" element={<Profile />} />
+              <Route path="/contato" element={<Contact />} /> 
             </Route>
           </Routes>
         </BrowserRouter>
