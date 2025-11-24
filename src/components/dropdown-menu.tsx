@@ -27,10 +27,6 @@ export function DropdownMenu({ open, menuRef, theme, toggleTheme }: DropdownMenu
                 Perfil
             </Link>
 
-            <button className="block w-full text-left px-4 py-2 hover:bg-(--select)">
-                Configurações
-            </button>
-
             <button
                 onClick={toggleTheme}
                 className="flex items-center gap-2 w-full text-left px-4 py-2 hover:bg-(--select) transition hover:cursor-pointer"

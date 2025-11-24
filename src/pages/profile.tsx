@@ -12,7 +12,7 @@ export function Profile() {
             .then((data) => setUser(data));
     }, []);
     return (
-        <div>
+        <div className="min-h-[75dvh]">
             <h1 className="title">Perfil</h1>
             <article className="w-15/16 mx-auto">
                 <section className="">
