@@ -16,7 +16,7 @@ export function Profile() {
             <h1 className="title">Perfil</h1>
             <article className="w-15/16 mx-auto">
                 <section className="">
-                    <h2 className="sub">Nome etc</h2>
+                    <h2 className="sub">Nome</h2>
 
                     {user.map((value) => {
                         return <UserCard user={value} />;
